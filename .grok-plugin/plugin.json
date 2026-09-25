@@ -1,0 +1,10 @@
+{
+  "name": "neverapply",
+  "version": "0.1.0",
+  "description": "Connect your NeverApply job search and application tracker through the hosted MCP server.",
+  "author": {
+    "name": "NeverApply"
+  },
+  "homepage": "https://neverapply.co/features/mcp",
+  "logo": "assets/neverapply-96.png"
+}
