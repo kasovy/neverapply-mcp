@@ -1,0 +1,14 @@
+{
+  "name": "neverapply",
+  "displayName": "NeverApply",
+  "version": "0.1.0",
+  "description": "Search jobs, see why each match fits, track your applications, and apply with your approval, all from your NeverApply account.",
+  "author": {
+    "name": "NeverApply",
+    "url": "https://neverapply.co"
+  },
+  "homepage": "https://neverapply.co/features/mcp",
+  "repository": "https://github.com/kasovy/neverapply-mcp",
+  "license": "MIT",
+  "keywords": ["jobs", "job-search", "job-applications", "resume", "careers"]
+}
