@@ -29,7 +29,7 @@ The skills are `find-jobs`, `apply-to-jobs` and `track-applications`.
 ## Connect
 
 1. Install the plugin in Claude, Cursor or Grok Build. In Claude, connect NeverApply on the plugin's Connectors tab.
-2. Choose Connect. Your browser opens the NeverApply sign-in. Use Google, LinkedIn or your email, or create an account.
+2. Choose Connect. Your browser opens the NeverApply sign-in. Sign in, or create an account.
 3. Sign in and choose which permissions to give: `mcp:read`, `mcp:write` or `mcp:apply`.
 
 The server uses OAuth 2.1 with PKCE only. Never paste a bearer token into these files.
