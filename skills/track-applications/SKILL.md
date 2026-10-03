@@ -11,9 +11,9 @@ To track applications:
 
 To prepare documents for a job:
 
-- Tailored resume: call `tailor_resume` once with the active `listing_id`. Each call creates a new resume variant, so do not call it again unless the user asks. Give the user the `studio_url`, and the score change when the result has one.
-- Interview preparation: call `prepare_interview` with the `application_id`, or with the `listing_id` for a job without an application. Summarize the sections that are useful now.
+- Tailored resume: call `tailor_resume` with the active `listing_id`. The copy is written in the background. While `status` is `generating`, call it again with the same `listing_id` in about a minute; a repeat call reads the same copy and does not pay for a second one. When it is ready, give the user the `studio_url` and the score change.
+- Interview preparation: call `prepare_interview` with the `application_id`, or with the `listing_id` for a job without an application. The pack is written in the background. While `status` is `generating`, call it again with the same ID in about a minute. When it is ready, summarize the sections that are useful now.
 
-Both tools need a paid NeverApply plan. If a tool reports `upgrade_required`, tell the user it is a paid feature. Do not retry.
+Both tools need a paid NeverApply plan and use no application credits. If a tool reports `upgrade_required`, tell the user it is a paid feature. Do not retry. If the text says the last attempt failed, tell the user.
 
 Call `send_feedback` only when the user asks to report a problem or send feedback, and use the user's own words.
