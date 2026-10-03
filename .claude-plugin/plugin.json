@@ -8,8 +8,11 @@
     "url": "https://neverapply.co"
   },
   "homepage": "https://neverapply.co/features/mcp",
+  "documentationUrl": "https://neverapply.co/features/mcp#connector-guide",
+  "supportUrl": "https://neverapply.co/contact",
   "repository": "https://github.com/kasovy/neverapply-mcp",
   "privacyPolicyUrl": "https://neverapply.co/privacy",
+  "termsOfServiceUrl": "https://neverapply.co/terms",
   "license": "MIT",
   "keywords": [
     "jobs",
