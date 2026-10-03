@@ -20,9 +20,8 @@ The plugin's skills teach Claude the steps: read your profile first, use only re
 | File | Used by |
 | --- | --- |
 | `.claude-plugin/plugin.json`, `.mcp.json` and `skills/` | Claude (claude.ai, desktop, Cowork and Claude Code) |
-| `.cursor-plugin/plugin.json` and `mcp.json` | Cursor |
-| `.grok-plugin/plugin.json` and `.mcp.json` | Grok Build |
-| `assets/neverapply-96.png` | Cursor and Grok Build manifests |
+| `.cursor-plugin/plugin.json`, `mcp.json` and `assets/` | Cursor |
+| `.grok-plugin/plugin.json`, `.mcp.json` and `assets/` | Grok Build |
 
 The skills are `find-jobs`, `apply-to-jobs` and `track-applications`.
 

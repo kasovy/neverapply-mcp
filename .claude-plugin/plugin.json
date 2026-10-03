@@ -9,6 +9,13 @@
   },
   "homepage": "https://neverapply.co/features/mcp",
   "repository": "https://github.com/kasovy/neverapply-mcp",
+  "privacyPolicyUrl": "https://neverapply.co/privacy",
   "license": "MIT",
-  "keywords": ["jobs", "job-search", "job-applications", "resume", "careers"]
+  "keywords": [
+    "jobs",
+    "job-search",
+    "job-applications",
+    "resume",
+    "careers"
+  ]
 }
