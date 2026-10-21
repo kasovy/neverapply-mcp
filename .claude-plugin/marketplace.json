@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "neverapply",
+  "description": "The NeverApply plugin for the hosted NeverApply MCP server.",
+  "owner": {
+    "name": "NeverApply",
+    "email": "hello@neverapply.co",
+    "url": "https://neverapply.co"
+  },
+  "plugins": [
+    {
+      "name": "neverapply",
+      "source": "./",
+      "description": "Search jobs, see why each match fits, track your applications, and apply with your approval, all from your NeverApply account.",
+      "author": {
+        "name": "NeverApply",
+        "url": "https://neverapply.co"
+      },
+      "homepage": "https://neverapply.co/features/mcp",
+      "repository": "https://github.com/kasovy/neverapply-mcp",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": [
+        "jobs",
+        "job-search",
+        "job-applications",
+        "resume",
+        "careers"
+      ]
+    }
+  ]
+}
