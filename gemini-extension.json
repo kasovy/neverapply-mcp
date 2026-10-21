@@ -1,0 +1,11 @@
+{
+  "name": "neverapply",
+  "version": "1.0.0",
+  "description": "Search jobs, see why each match fits, track your applications, and apply with your approval, all from your NeverApply account.",
+  "mcpServers": {
+    "neverapply": {
+      "httpUrl": "https://neverapply.co/mcp",
+      "description": "NeverApply hosted MCP server. Sign in with OAuth; no API key."
+    }
+  }
+}
