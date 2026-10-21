@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check that the tag matches the manifest versions
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          for file in plugin.json gemini-extension.json lhm.plugin.json .claude-plugin/plugin.json .cursor-plugin/plugin.json .grok-plugin/plugin.json; do
+            actual=$(jq -r .version "$file")
+            if [ "$actual" != "$version" ]; then
+              echo "$file has version $actual, tag is $GITHUB_REF_NAME"
+              exit 1
+            fi
+          done
+
+      # actions/checkout replaces an annotated tag with a lightweight one; fetch the real tag for its message.
+      - name: Create the GitHub release from the annotated tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch --force origin "refs/tags/${GITHUB_REF_NAME}:refs/tags/${GITHUB_REF_NAME}"
+          gh release create "$GITHUB_REF_NAME" --verify-tag --title "$GITHUB_REF_NAME" --notes-from-tag
