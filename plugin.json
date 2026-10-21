@@ -1,0 +1,46 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "neverapply",
+  "version": "1.0.0",
+  "description": "Search jobs, see why each match fits, track your applications, and apply with your approval, all from your NeverApply account.",
+  "author": {
+    "name": "NeverApply",
+    "email": "hello@neverapply.co",
+    "url": "https://neverapply.co"
+  },
+  "homepage": "https://neverapply.co/features/mcp",
+  "repository": "https://github.com/kasovy/neverapply-mcp",
+  "license": "MIT",
+  "keywords": [
+    "neverapply",
+    "jobs",
+    "job search",
+    "job applications",
+    "resume",
+    "interview",
+    "careers"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "NeverApply",
+        "shortDescription": "Job search and applications",
+        "longDescription": "Connect your NeverApply account to search jobs, see why each match fits, read your application history, update your profile, prepare tailored resumes and interview packs, and apply to jobs you approve. Searching, reading and profile edits are free within usage limits. Resume tailoring and interview preparation need paid feature access. Applying needs the apply permission, credits and your approval of each named job. You sign in on NeverApply with OAuth; no API key is needed.",
+        "developerName": "NeverApply",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://neverapply.co/features/mcp",
+        "supportURL": "https://neverapply.co/contact",
+        "privacyPolicyURL": "https://neverapply.co/privacy",
+        "termsOfServiceURL": "https://neverapply.co/terms",
+        "defaultPrompt": [
+          "Find remote product manager jobs in Germany that fit me.",
+          "Why is this job a good match?",
+          "What applications are waiting for me?"
+        ],
+        "composerIcon": "./assets/neverapply-96.png",
+        "logo": "./assets/neverapply-96.png"
+      }
+    }
+  }
+}
