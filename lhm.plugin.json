@@ -1,0 +1,13 @@
+{
+  "identifier": "kasovy-neverapply-mcp",
+  "name": "NeverApply",
+  "version": "1.0.0",
+  "description": "Search jobs, see why each match fits, track your applications, and apply with your approval, all from your NeverApply account. Hosted remote MCP server with OAuth sign-in; no API key.",
+  "author": "NeverApply",
+  "authorUrl": "https://neverapply.co",
+  "homepage": "https://neverapply.co/features/mcp",
+  "cloudEndpoint": "https://neverapply.co/mcp",
+  "category": "productivity",
+  "icon": "https://raw.githubusercontent.com/kasovy/neverapply-mcp/main/assets/neverapply-96.png",
+  "tags": ["jobs", "job-search", "job-applications", "resume", "careers"]
+}
