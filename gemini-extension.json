@@ -1,11 +1,12 @@
 {
   "name": "neverapply",
   "version": "1.0.0",
-  "description": "Search jobs, see why each match fits, track your applications, and apply with your approval, all from your NeverApply account.",
+  "description": "NeverApply's hosted MCP server lets Claude, Cursor, Cline and other MCP clients search and match jobs, tailor resumes, answer screening questions, prepare for interviews, and apply to jobs with your approval. OAuth sign-in, 15 tools.",
   "mcpServers": {
     "neverapply": {
       "httpUrl": "https://neverapply.co/mcp",
       "description": "NeverApply hosted MCP server. Sign in with OAuth; no API key."
     }
-  }
+  },
+  "contextFileName": "GEMINI.md"
 }

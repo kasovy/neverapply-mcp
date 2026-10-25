@@ -149,7 +149,7 @@ The plugin's skills teach your assistant the steps: read your profile first, use
 | `plugin.json`, `mcp.json`, `skills/` and `assets/` | Agent Plugins: Codex and ChatGPT, Kiro powers and Cursor |
 | `.agents/plugins/marketplace.json` | Codex plugin marketplace |
 | `.cursor-plugin/plugin.json`, `mcp.json` and `assets/` | Cursor |
-| `gemini-extension.json` and `skills/` | Gemini CLI extension and gallery |
+| `gemini-extension.json`, `GEMINI.md` and `skills/` | Gemini CLI extension and gallery |
 | `.grok-plugin/plugin.json`, `.mcp.json` and `assets/` | Grok Build |
 | `lhm.plugin.json` | LobeHub MCP marketplace |
 
