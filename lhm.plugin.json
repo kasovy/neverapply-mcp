@@ -2,7 +2,7 @@
   "identifier": "kasovy-neverapply-mcp",
   "name": "NeverApply",
   "version": "1.0.0",
-  "description": "NeverApply's hosted MCP server lets Claude, Cursor, Cline and other MCP clients search and match jobs, tailor resumes, answer screening questions, prepare for interviews, and apply to jobs with your approval. OAuth sign-in, 15 tools.",
+  "description": "NeverApply's hosted MCP server lets Claude, Cursor, Cline and other MCP clients search jobs without signing in, then match jobs, tailor resumes, answer screening questions, prepare for interviews, and apply to jobs with your approval. Guest search plus OAuth, 15 tools.",
   "author": "Kasovy LLC",
   "authorUrl": "https://neverapply.co",
   "homepage": "https://neverapply.co/features/mcp",

@@ -1,11 +1,11 @@
 ---
 name: find-jobs
-description: Find jobs and explain matches from the user's NeverApply account. Use when the user asks for jobs, openings or roles that fit them, asks about their matches, or asks why a job is or is not a good fit.
+description: Find jobs and explain matches. A plain search works without signing in; matches and anything personal need the user's NeverApply account. Use when the user asks for jobs, openings or roles that fit them, asks about their matches, or asks why a job is or is not a good fit.
 ---
 
 To find jobs for the user:
 
-1. Call the NeverApply `get_profile` tool first. If `profile_completeness` shows missing facts, such as desired roles or locations, tell the user what is missing. Offer to save the answers with `update_profile`, and ask before you write anything.
+1. For a plain job search, you can call `search_jobs` without the user signing in; results are capped and carry no match scores. For matches or anything personal, call the NeverApply `get_profile` tool first. If `profile_completeness` shows missing facts, such as desired roles or locations, tell the user what is missing. Offer to save the answers with `update_profile`, and ask before you write anything.
 2. Choose the tool that fits the request:
    - "What fits me", "my matches" or "new jobs for me": call `get_matches`. If `matches_state` is `computing`, wait for `retry_after_seconds`, then call it again. Stop when the state is `none`.
    - A specific search (a title, a country, remote only, a salary floor, recent posts): call `search_jobs` with only the filters the user gave. Do not add filters the user did not ask for.

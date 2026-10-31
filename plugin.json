@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "neverapply",
   "version": "1.0.0",
-  "description": "Search jobs, see why each match fits, track your applications, and apply with your approval, all from your NeverApply account.",
+  "description": "Search jobs without signing in. After you sign in, see why each match fits, track your applications, and apply with your approval.",
   "author": {
     "name": "NeverApply",
     "email": "hello@neverapply.co",
@@ -25,7 +25,7 @@
       "interface": {
         "displayName": "NeverApply",
         "shortDescription": "Job search and applications",
-        "longDescription": "Connect your NeverApply account to search jobs, see why each match fits, read your application history, update your profile, prepare tailored resumes and interview packs, and apply to jobs you approve. Searching, reading and profile edits are free within usage limits. Resume tailoring and interview preparation need paid feature access. Applying needs the apply permission, credits and your approval of each named job. You sign in on NeverApply with OAuth; no API key is needed.",
+        "longDescription": "Search jobs and read one job without signing in (10 results, no match scores). Sign in on NeverApply with OAuth to see why each match fits, read your application history, update your profile, prepare tailored resumes and interview packs, and apply to jobs you approve. Searching, reading and profile edits are free within usage limits. Resume tailoring and interview preparation need paid feature access. Applying needs the apply permission, credits and your approval of each named job. No API key is needed.",
         "developerName": "NeverApply",
         "category": "Productivity",
         "capabilities": ["Read", "Write"],
