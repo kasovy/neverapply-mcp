@@ -2,7 +2,7 @@
 
 Plugin for the hosted [NeverApply](https://neverapply.co) MCP server at `https://neverapply.co/mcp`, for Claude, ChatGPT and Codex, Cursor, VS Code with GitHub Copilot, Gemini CLI, Kiro and Grok. This repository holds only manifests, skills and an icon. The server runs on NeverApply; no server code, API key or token is here.
 
-With the plugin, your AI assistant can search jobs, explain your matches, show your application history, update your profile, prepare resume and interview drafts, and apply to jobs you approve, all from your NeverApply account.
+With the plugin, your AI assistant can search jobs and read one job without signing in. After you sign in, it can explain your matches, show your application history, update your profile, prepare resume and interview drafts, and apply to jobs you approve.
 
 ## Server
 
@@ -10,12 +10,14 @@ With the plugin, your AI assistant can search jobs, explain your matches, show y
 | --- | --- |
 | URL | `https://neverapply.co/mcp` |
 | Transport | Streamable HTTP |
-| Authentication | OAuth 2.1 with PKCE and dynamic client registration. No API key. |
+| Authentication | None for `search_jobs` and `get_job` (10 results, no match scores). OAuth 2.1 with PKCE and dynamic client registration for every other tool. No API key. |
 | Docs | [neverapply.co/features/mcp](https://neverapply.co/features/mcp) |
 
-The same URL works in every assistant. When you connect, your browser opens the NeverApply sign-in. Sign in, or create an account, and choose which permissions to give: `mcp:read`, `mcp:write` or `mcp:apply`. Never paste a bearer token into a config file.
+The same URL works in every assistant. You can search jobs and read one job without signing in. For matches, your profile and applications, your browser opens the NeverApply sign-in. Sign in, or create an account, and choose which permissions to give: `mcp:read`, `mcp:write` or `mcp:apply`. Never paste a bearer token into a config file.
 
 ## Install
+
+You can search jobs without signing in. Sign in when you want matches, your profile or applications.
 
 ### Claude (claude.ai, desktop and Cowork)
 
@@ -130,12 +132,13 @@ Ask in plain words, for example:
 - "Apply to the Acme job with my tailored resume."
 - "What applications are waiting for me?"
 
-The plugin's skills teach your assistant the steps: read your profile first, use only real job IDs, show salary only when the employer stated it, and ask for your approval of each named job before it applies.
+The plugin's skills teach your assistant the steps: search without signing in, read your profile before matches or anything personal, use only real job IDs, show salary only when the employer stated it, and ask for your approval of each named job before it applies.
 
 ## Tools
 
 | Access | Tools |
 | --- | --- |
+| Guest | `search_jobs`, `get_job` (10 results, no match scores) |
 | Read | `search_jobs`, `get_matches`, `get_job`, `get_profile`, `list_applications`, `get_application` |
 | Edit | `update_profile`, `upload_resume`, `save_answer`, `tailor_resume`, `prepare_interview`, `send_feedback` |
 | Apply | `apply_to_job`, `answer_screening_question`, `approve_application` |
@@ -157,11 +160,11 @@ The skills are `find-jobs`, `apply-to-jobs` and `track-applications`. `scripts/v
 
 ## Data
 
-The plugin sends your requests and the tool arguments that your assistant chooses (for example a job search, a `listing_id`, profile answers or a pasted resume) to NeverApply at `https://neverapply.co/mcp`, over HTTPS with your OAuth token. It sends data nowhere else, runs no code on your computer, and stores nothing itself. NeverApply stores your account data as its [privacy policy](https://neverapply.co/privacy) describes. When you apply, NeverApply sends your application to the employer's own hiring site.
+The plugin sends your requests and the tool arguments that your assistant chooses (for example a job search, a `listing_id`, profile answers or a pasted resume) to NeverApply at `https://neverapply.co/mcp` over HTTPS. Guest `search_jobs` and `get_job` calls send no token. Signed-in calls use your OAuth token. It sends data nowhere else, runs no code on your computer, and stores nothing itself. NeverApply stores your account data as its [privacy policy](https://neverapply.co/privacy) describes. When you apply, NeverApply sends your application to the employer's own hiring site.
 
 ## Permissions and costs
 
-- Searching, reading your matches and applications, and editing your profile are free within usage limits.
+- Searching and reading one job work without signing in (10 results, no match scores). Searching, reading your matches and applications, and editing your profile are free within usage limits.
 - Resume tailoring and interview preparation need paid feature access.
 - Applying needs the `mcp:apply` scope, credits and your approval of each named job. Without a separate send permission for this client, the application waits for your approval and costs nothing.
 - Disconnect a client at any time in NeverApply under Settings → Connected AI clients.

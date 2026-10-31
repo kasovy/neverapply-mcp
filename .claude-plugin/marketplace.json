@@ -11,7 +11,7 @@
     {
       "name": "neverapply",
       "source": "./",
-      "description": "Search jobs, see why each match fits, track your applications, and apply with your approval, all from your NeverApply account.",
+      "description": "Search jobs without signing in. After you sign in, see why each match fits, track your applications, and apply with your approval.",
       "author": {
         "name": "NeverApply",
         "url": "https://neverapply.co"
